@@ -1,0 +1,16 @@
+<form #Userform="ngForm" class="form-control">
+    <div class="row rowGroup">
+        <div class="form-group col-md-6">
+            <label>Url<span style="color:red;" *ngIf="originalUrl.length == 0">*</span></label>
+            <input type="text" class="form-control" id="originalUrl" name="originalUrl" 
+            (blur)="checkValidUrl(originalUrl)" [(ngModel)]="originalUrl" placeholder="Url" />
+        </div>
+    </div>
+    <div class="row buttonRow">
+        <div class="col-md-4"></div>
+        <button type="submit" class="btn btn-primary col-md-4" (click)="submit()">
+            Save
+        </button>
+        <div class="col-md-4"></div>
+    </div>
+</form> 
